@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="jp.co.internous.prototype.action" extends="struts-default">
+
+	    <action name="CalendarAction"
+		    class="jp.co.internous.prototype.action.CalendarAction" method="execute">
+			<result name="success">/Calendar.jsp</result>
+			<result name="error">/Calendar.jsp</result>
+		</action>
+
+		<action name="LoginUserAction"
+		    class="jp.co.internous.prototype.action.LoginUserAction" method="execute">
+			<result name="success">/MyPage.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+		<action name="LogoutUserAction"
+		    class="jp.co.internous.prototype.action.LogoutUserAction" method="execute">
+			<result name="success">/Main.jsp</result>
+			<result name="error">/Main.jsp</result>
+		</action>
+
+		<action name="CreateUserAction"
+		    class="jp.co.internous.prototype.action.CreateUserAction" method="execute">
+			<result name="success">/Login.jsp</result>
+			<result name="error">/Login.jsp</result>
+			<result name="input">/Create.jsp</result>
+		</action>
+
+		<action name="TwitterLoginAction"
+		    class="jp.co.internous.prototype.action.TwitterLoginAction" method="execute">
+			<result name="success">/Login.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+        <action name="LoginTwitterAction"
+		    class="jp.co.internous.prototype.action.LoginTwitterAction" method="execute">
+			<result name="success">/MyPage.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+        <action name="GoogleOAuth" class="jp.co.internous.prototype.google.GoogleOAuth"
+			method="execute">
+			<result name="success">/Login.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+		<action name="GoogleOAuth2" class="jp.co.internous.prototype.google.GoogleOAuth2"
+			method="execute">
+			<result name="success">/MyPage.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+		<action name="FacebookLoginAction" class="jp.co.internous.prototype.facebook.SignInServlet"
+			method="execute">
+			<result name="success">/Login.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+		<action name="CallbackServlet" class="jp.co.internous.prototype.facebook.CallbackServlet"
+			method="execute">
+			<result name="success">/MyPage.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+		<action name="D3Action" class="jp.co.internous.prototype.action.D3Action"
+			method="execute">
+			<result name="success">/D3.jsp</result>
+		</action>
+
+
+	</package>
+</struts>

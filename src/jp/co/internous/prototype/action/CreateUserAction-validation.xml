@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+
+	<field name="password">
+		<field-validator type="requiredstring">
+			<message>※パスワードを入力してください</message>
+		</field-validator>
+	</field>
+
+	<field name="user">
+		<field-validator type="requiredstring">
+			<message>※お名前を入力してください</message>
+		</field-validator>
+	</field>
+	<field name="email">
+		<field-validator type="requiredstring">
+			<message>※メールアドレスを入力してください</message>
+		</field-validator>
+	</field>
+
+	<field name="password">
+		<field-validator type="regex">
+			<param name="regex">^[0-9a-zA-Z]+</param>
+			<message>※半角英数字で入力してください</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="stringlength">
+			<param name="minLength">4</param>
+			<param name="maxLength">16</param>
+			<message>※パスワードは4文字以上16字以内で入力してください</message>
+		</field-validator>
+	</field>
+	<field name="user">
+		<field-validator type="regex">
+			<param name="regex">^[ぁ-んァ-ヶ一-龠一-十ａ-ｚＡ-Ｚ０-９]+</param>
+			<message>※お名前に半角英字、記号、空白スペースは使用できません</message>
+		</field-validator>
+	</field>
+	<field name="email">
+		<field-validator type="email">
+			<param name="email" />
+			<message>※メールアドレスが不正です</message>
+		</field-validator>
+	</field>
+
+</validators>
