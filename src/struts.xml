@@ -5,70 +5,70 @@
 
 <struts>
 	<constant name="struts.devMode" value="true" />
-	<package name="jp.co.internous.prototype.action" extends="struts-default">
+	<package name="com.internousdev.prototype.action" extends="struts-default">
 
-	    <action name="CalendarAction"
-		    class="jp.co.internous.prototype.action.CalendarAction" method="execute">
+		<action name="CalendarAction" class="com.internousdev.prototype.action.CalendarAction"
+			method="execute">
 			<result name="success">/Calendar.jsp</result>
 			<result name="error">/Calendar.jsp</result>
 		</action>
 
 		<action name="LoginUserAction"
-		    class="jp.co.internous.prototype.action.LoginUserAction" method="execute">
+			class="com.internousdev.prototype.action.LoginUserAction" method="execute">
 			<result name="success">/MyPage.jsp</result>
 			<result name="error">/Login.jsp</result>
 		</action>
 
 		<action name="LogoutUserAction"
-		    class="jp.co.internous.prototype.action.LogoutUserAction" method="execute">
+			class="com.internousdev.prototype.action.LogoutUserAction" method="execute">
 			<result name="success">/Main.jsp</result>
 			<result name="error">/Main.jsp</result>
 		</action>
 
 		<action name="CreateUserAction"
-		    class="jp.co.internous.prototype.action.CreateUserAction" method="execute">
+			class="com.internousdev.prototype.action.CreateUserAction" method="execute">
 			<result name="success">/Login.jsp</result>
 			<result name="error">/Login.jsp</result>
 			<result name="input">/Create.jsp</result>
 		</action>
 
 		<action name="TwitterLoginAction"
-		    class="jp.co.internous.prototype.action.TwitterLoginAction" method="execute">
+			class="com.internousdev.prototype.action.TwitterLoginAction" method="execute">
 			<result name="success">/Login.jsp</result>
 			<result name="error">/Login.jsp</result>
 		</action>
 
-        <action name="LoginTwitterAction"
-		    class="jp.co.internous.prototype.action.LoginTwitterAction" method="execute">
+		<action name="LoginTwitterAction"
+			class="com.internousdev.prototype.action.LoginTwitterAction" method="execute">
 			<result name="success">/MyPage.jsp</result>
 			<result name="error">/Login.jsp</result>
 		</action>
 
-        <action name="GoogleOAuth" class="jp.co.internous.prototype.google.GoogleOAuth"
-			method="execute">
-			<result name="success">/Login.jsp</result>
-			<result name="error">/Login.jsp</result>
-		</action>
-
-		<action name="GoogleOAuth2" class="jp.co.internous.prototype.google.GoogleOAuth2"
-			method="execute">
-			<result name="success">/MyPage.jsp</result>
-			<result name="error">/Login.jsp</result>
-		</action>
-
-		<action name="FacebookLoginAction" class="jp.co.internous.prototype.facebook.SignInServlet"
+		<action name="GoogleOAuth" class="com.internousdev.prototype.google.GoogleOAuth"
 			method="execute">
 			<result name="success">/Login.jsp</result>
 			<result name="error">/Login.jsp</result>
 		</action>
 
-		<action name="CallbackServlet" class="jp.co.internous.prototype.facebook.CallbackServlet"
+		<action name="GoogleOAuth2" class="com.internousdev.prototype.google.GoogleOAuth2"
 			method="execute">
 			<result name="success">/MyPage.jsp</result>
 			<result name="error">/Login.jsp</result>
 		</action>
 
-		<action name="D3Action" class="jp.co.internous.prototype.action.D3Action"
+		<action name="FacebookLoginAction" class="com.internousdev.prototype.facebook.SignInServlet"
+			method="execute">
+			<result name="success">/Login.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+		<action name="CallbackServlet"
+			class="com.internousdev.prototype.facebook.CallbackServlet" method="execute">
+			<result name="success">/MyPage.jsp</result>
+			<result name="error">/Login.jsp</result>
+		</action>
+
+		<action name="D3Action" class="com.internousdev.prototype.action.D3Action"
 			method="execute">
 			<result name="success">/D3.jsp</result>
 		</action>
